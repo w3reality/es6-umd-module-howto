@@ -1,8 +1,10 @@
-export default class Bar {
-    constructor() {
-        //...
+import Base from './Base.js';
+
+export default class Bar extends Base {
+    constructor(isBrowser) {
+        super(isBrowser);
     }
     hello() {
-        console.log('hi from bar');
+        this.log('hi from Bar object');
     }
 }
