@@ -3,10 +3,10 @@
 <body>
     <script src='./require.js'></script>
     <script type="text/javascript">
-    // --------------------------------------------------------------------------
-    // App code
-    // --------------------------------------------------------------------------
     require(['../my-module/lib/my-module.js'], function (MyModule) {
+        // --------------------------------------------------------------------------
+        // App code
+        // --------------------------------------------------------------------------
         // console.log(MyModule); // {Foo: ƒ, Bar: ƒ}
         var foo = new MyModule.Foo(true);
         var bar = new MyModule.Bar(true);
