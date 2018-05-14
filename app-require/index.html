@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script src='./require.js'></script>
+    <script type="text/javascript">
+    // --------------------------------------------------------------------------
+    // App code
+    // --------------------------------------------------------------------------
+    require(['../my-module/lib/my-module.js'], function (MyModule) {
+        // console.log(MyModule); // {Foo: ƒ, Bar: ƒ}
+        var foo = new MyModule.Foo(true);
+        var bar = new MyModule.Bar(true);
+        foo.hello();
+        bar.hello();
+    });
+    </script>
+</body>
+</html>

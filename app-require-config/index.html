@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script src='./require.js'></script>
+    <script type="text/javascript">
+    // --------------------------------------------------------------------------
+    // App code
+    // --------------------------------------------------------------------------
+    requirejs.config({
+        baseUrl: ".",
+        paths: {
+            "my-module": "../my-module/lib/my-module",
+            "index": "./index",
+        },
+        shim: {
+            "index": {
+                deps: ["my-module"],
+            },
+        },
+    });
+    require(['index']);
+    </script>
+</body>
+</html>
