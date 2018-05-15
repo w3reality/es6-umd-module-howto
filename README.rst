@@ -34,6 +34,8 @@ Universal module from ES6 JavaScript
 Building universal module and app from ES6 JavaScript
 -----------------------------------------------------
 
+https://w3reality.github.io/es6-umd-module-howto/my-app/dist/index.html
+
 .. code::
 
    my-app                          # comments
@@ -60,6 +62,8 @@ Consuming a universal module
 
 **(1) app-script-tag**
 
+https://w3reality.github.io/es6-umd-module-howto/app-script-tag/index.html
+
 .. code::
 
     <script src="../my-module/lib/my-module.js"></script>
@@ -76,6 +80,8 @@ Consuming a universal module
   
 
 **(2) app-require**
+
+https://w3reality.github.io/es6-umd-module-howto/app-require/index.html
 
 .. code::
 
@@ -95,6 +101,8 @@ Consuming a universal module
 
 
 **(3) app-require-config**
+
+https://w3reality.github.io/es6-umd-module-howto/app-require-config/index.html
 
 .. code::
 
