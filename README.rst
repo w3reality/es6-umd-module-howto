@@ -26,7 +26,9 @@ Universal module from ES6 JavaScript
 
 .. code::
 
-   
+   $ cd my-module
+   $ npm install  # set up build tools
+   $ npm run build  # get ES5 module output
 
    
 Building universal module and app from ES6 JavaScript
@@ -44,18 +46,103 @@ Building universal module and app from ES6 JavaScript
    │   ├── app.js                  # app
    │   ├── app.min.js              # app minified
    │   ├── app.js.map              # source map
+   │   ├── index.html              
+
+.. code::
+
+   $ cd my-app
+   $ npm install  # set up build tools
+   $ npm run build  # get ES5 app output
 
 
 Consuming a universal module
 ----------------------------
 
-**app-script tag**
+**(1) app-script-tag**
 
-**app-require**
+.. code::
 
-**app-require-config**
+    <script src="../my-module/lib/my-module.js"></script>
+    <script type="text/javascript">
+    // --------------------------------------------------------------------------
+    // App code
+    // --------------------------------------------------------------------------
+    // console.log(MyModule); // {Foo: ƒ, Bar: ƒ}
+    var foo = new MyModule.Foo(true);
+    var bar = new MyModule.Bar(true);
+    foo.hello();
+    bar.hello();
+    </script>
+  
 
-**app-node**
+**(2) app-require**
+
+.. code::
+
+    <script src='../vendor/require.js'></script>
+    <script type="text/javascript">
+    require(['../my-module/lib/my-module.js'], function (MyModule) {
+        // --------------------------------------------------------------------------
+        // App code
+        // --------------------------------------------------------------------------
+        // console.log(MyModule); // {Foo: ƒ, Bar: ƒ}
+        var foo = new MyModule.Foo(true);
+        var bar = new MyModule.Bar(true);
+        foo.hello();
+        bar.hello();
+    });
+    </script>
 
 
+**(3) app-require-config**
+
+.. code::
+
+    <script src='../vendor/require.js'></script>
+    <script type="text/javascript">
+    requirejs.config({
+        baseUrl: ".",
+        paths: {
+            "my-module": "../my-module/lib/my-module",
+            "index": "./index",
+        },
+        shim: {
+            "index": {
+                deps: ["my-module"],
+            },
+        },
+    });
+    require(['index']);
+    </script>
+
+.. code::
+
+   // --------------------------------------------------------------------------
+   // App code
+   // --------------------------------------------------------------------------
+   var MyModule = require('my-module');
+   // console.log(MyModule); // {Foo: ƒ, Bar: ƒ}
+   var foo = new MyModule.Foo(true);
+   var bar = new MyModule.Bar(true);
+   foo.hello();
+   bar.hello();
+
+**(4) app-node**
+
+.. code::
+
+   #!/usr/bin/env node
+   
+   const MyModule = require('../my-module/lib/my-module.js');
+   let foo = new MyModule.Foo();
+   let bar = new MyModule.Bar();
+   foo.hello();
+   bar.hello();
+  
+.. code::
+
+   #!/usr/bin/env node
+   
+   require('../my-app/dist/app.js');
+   
 

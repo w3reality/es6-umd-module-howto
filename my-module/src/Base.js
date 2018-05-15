@@ -4,7 +4,7 @@ export default class Base {
         // console.log('isBrowser:', isBrowser);
     }
     log(msg) {
-        if (this.isBrowser) {
+        if (this.isBrowser && typeof document !== 'undefined') {
             let p = document.createElement('p');
             p.textContent = msg;
             document.body.appendChild(p);

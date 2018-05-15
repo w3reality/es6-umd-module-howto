@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('../app-es6-import/dist/app.js');
+require('../my-app/dist/app.js');

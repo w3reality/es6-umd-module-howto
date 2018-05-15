@@ -101,7 +101,7 @@ var Base = function () {
     _createClass(Base, [{
         key: 'log',
         value: function log(msg) {
-            if (this.isBrowser) {
+            if (this.isBrowser && typeof document !== 'undefined') {
                 var p = document.createElement('p');
                 p.textContent = msg;
                 document.body.appendChild(p);

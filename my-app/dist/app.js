@@ -60,59 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _src = __webpack_require__(3);
-
-var _src2 = _interopRequireDefault(_src);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// OK
-//import MyModule from '../../my-module/lib/my-module'; // this doesn't work; workaround??
-
-console.log('hi from app');
-var foo = new _src2.default.Foo();
-var bar = new _src2.default.Bar();
-foo.hello();
-bar.hello();
-
-/***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Foo = __webpack_require__(4);
-
-var _Foo2 = _interopRequireDefault(_Foo);
-
-var _Bar = __webpack_require__(5);
-
-var _Bar2 = _interopRequireDefault(_Bar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = { Foo: _Foo2.default, Bar: _Bar2.default };
-module.exports = exports['default'];
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -124,7 +76,97 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Base2 = __webpack_require__(6);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Base = function () {
+    function Base() {
+        var isBrowser = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+        _classCallCheck(this, Base);
+
+        this.isBrowser = isBrowser;
+        // console.log('isBrowser:', isBrowser);
+    }
+
+    _createClass(Base, [{
+        key: 'log',
+        value: function log(msg) {
+            if (this.isBrowser && typeof document !== 'undefined') {
+                var p = document.createElement('p');
+                p.textContent = msg;
+                document.body.appendChild(p);
+            } else {
+                console.log(msg);
+            }
+        }
+    }]);
+
+    return Base;
+}();
+
+exports.default = Base;
+module.exports = exports['default'];
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _src = __webpack_require__(2);
+
+var _src2 = _interopRequireDefault(_src);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// OK
+//import MyModule from '../../my-module/lib/my-module'; // this doesn't work; workaround??
+
+console.log('hi from app');
+var foo = new _src2.default.Foo(true);
+var bar = new _src2.default.Bar(true);
+foo.hello();
+bar.hello();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Foo = __webpack_require__(3);
+
+var _Foo2 = _interopRequireDefault(_Foo);
+
+var _Bar = __webpack_require__(4);
+
+var _Bar2 = _interopRequireDefault(_Bar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = { Foo: _Foo2.default, Bar: _Bar2.default };
+module.exports = exports['default'];
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _Base2 = __webpack_require__(0);
 
 var _Base3 = _interopRequireDefault(_Base2);
 
@@ -159,7 +201,7 @@ exports.default = Foo;
 module.exports = exports['default'];
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -171,7 +213,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Base2 = __webpack_require__(6);
+var _Base2 = __webpack_require__(0);
 
 var _Base3 = _interopRequireDefault(_Base2);
 
@@ -203,50 +245,6 @@ var Bar = function (_Base) {
 }(_Base3.default);
 
 exports.default = Bar;
-module.exports = exports['default'];
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Base = function () {
-    function Base() {
-        var isBrowser = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-
-        _classCallCheck(this, Base);
-
-        this.isBrowser = isBrowser;
-        // console.log('isBrowser:', isBrowser);
-    }
-
-    _createClass(Base, [{
-        key: 'log',
-        value: function log(msg) {
-            if (this.isBrowser) {
-                var p = document.createElement('p');
-                p.textContent = msg;
-                document.body.appendChild(p);
-            } else {
-                console.log(msg);
-            }
-        }
-    }]);
-
-    return Base;
-}();
-
-exports.default = Base;
 module.exports = exports['default'];
 
 /***/ })
