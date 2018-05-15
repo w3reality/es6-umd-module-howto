@@ -1,9 +1,18 @@
 
-Standalone demo of creating universal modules/apps from ES6 JavaScript code
-===========================================================================
+[DRAFT] Standalone demo of creating universal modules/apps from ES6 JavaScript code
+===================================================================================
 
  this repos is ...
- ioi
+
+stay minimal and demonstrates how to extend ES6 classes and
+selectively export them.
+the module consists of only three classes and exposes
+two classes Foo and Bar.  
+but this configuration is scalable to fully featured module such as
+three.js.  
+
+first, show module and app building.  as a comprementary material, we
+show various ways of consuming the same module.
 
 Universal module from ES6 JavaScript
 ------------------------------------
