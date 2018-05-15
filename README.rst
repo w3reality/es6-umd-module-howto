@@ -11,15 +11,15 @@ two classes Foo and Bar.
 but this configuration is scalable to fully featured module such as
 three.js.  
 
-first, show module and app building.  as a comprementary material, we
-show various ways of consuming the same module.
+first, show module and app building.  as a complementary material, we
+list examples with various ways of consuming the same module.
 
 Universal module from ES6 JavaScript
 ------------------------------------
 
 .. code::
 
-   my-module                       # comments
+   my-module
    ├── package.json
    ├── webpack.config.js
    ├── src                         # ES6 source code
@@ -47,7 +47,7 @@ https://w3reality.github.io/es6-umd-module-howto/my-app/dist/index.html
 
 .. code::
 
-   my-app                          # comments
+   my-app
    ├── package.json
    ├── webpack.config.js
    ├── src                         # ES6 source code
@@ -66,8 +66,14 @@ https://w3reality.github.io/es6-umd-module-howto/my-app/dist/index.html
    $ npm run build  # get ES5 app output
 
 
-Consuming a universal module
-----------------------------
+Complementary examples: Consuming a universal module
+----------------------------------------------------
+
+!! ex-require
+!! ex-...
+!! ex-...
+!! ex-...
+
 
 **(1) app-script-tag**
 
@@ -161,5 +167,5 @@ https://w3reality.github.io/es6-umd-module-howto/app-require-config/index.html
    #!/usr/bin/env node
    
    require('../my-app/dist/app.js');
-   
 
+   
