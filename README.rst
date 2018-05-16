@@ -26,7 +26,7 @@ Universal module from ES6 JavaScript
    │   ├── Base.js                 # class 
    │   ├── Foo.js                  # subclass of Base
    │   ├── Bar.js                  # subclass of Base
-   │   ├── index.js                # module implementation; export { Foo, Bar }
+   │   ├── index.js                # module implementation (export { Foo, Bar })
    │
    ├── lib                         # ES5 output
    │   ├── my-module.js            # umd module
@@ -51,7 +51,7 @@ https://w3reality.github.io/es6-umd-module-howto/my-app/dist/index.html
    ├── package.json
    ├── webpack.config.js
    ├── src                         # ES6 source code
-   │   ├── index.js                # app implementation; import my-module/src
+   │   ├── index.js                # app implementation (import my-module/src)
    │
    ├── dist                        # ES5 output
    │   ├── app.js                  # app

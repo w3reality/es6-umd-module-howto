@@ -1,6 +1,6 @@
 import Base from './Base.js';
 
-export default class Bar extends Base {
+class Bar extends Base {
     constructor(isBrowser) {
         super(isBrowser);
     }
@@ -8,3 +8,5 @@ export default class Bar extends Base {
         this.log('hi from Bar object');
     }
 }
+
+export default Bar;

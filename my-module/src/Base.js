@@ -1,4 +1,4 @@
-export default class Base {
+class Base {
     constructor(isBrowser=false) {
         this.isBrowser = isBrowser;
         // console.log('isBrowser:', isBrowser);
@@ -13,3 +13,5 @@ export default class Base {
         }
     }
 }
+
+export default Base;
