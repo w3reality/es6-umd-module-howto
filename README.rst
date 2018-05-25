@@ -4,15 +4,15 @@
 
 A minimal demo of defining ES6 classes and selectively export them as a module.
 In this boilerplate, a sample module (``my-module.js``) is implementated using three ES6 classes
-``Base``, ``Foo``, and ``Bar``.  But the module exposes only two of them: ``Foo`` and ``Bar``.  
-This configuration is so simple, yet scalable to a fully featured module
-such as three.js (that contains many classes, e.g. THREE.Scene, THREE.Mesh, ...).
+``Base``, ``Foo``, and ``Bar``.  But the module exposes only two of them: ``MyModule.Foo`` and ``MyModule.Bar``.  
+This configuration is so simple, yet scalable to writing a fully featured module
+such as three.js (that contains many classes, e.g. ``THREE.Scene``, ``THREE.Mesh``, ...).
 
 Here we explain how to build the module and an ES6 app that imports it.  The output
 is compiled as ES5 `UMD (Universal Module Definition)`_ module and app.
 So they can be consumed by script-tags, AMD loading (require.js), and Node.js.
 
-As a complementary material, we list examples with alternative forms of coding apps
+As a complementary material, we list examples with alternative forms of writing apps
 that consumes ``my-module.js`` build above.
 
 Building a universal module from ES6 JavaScript
