@@ -12,8 +12,10 @@ Here we explain how to build the module and an ES6 app that imports it.  The out
 is compiled as ES5 `UMD (Universal Module Definition)`_ module and app.
 So they can be consumed by script-tags, AMD loading (require.js), and Node.js.
 
+.. _UMD (Universal Module Definition): https://github.com/umdjs/umd
+
 As a complementary material, we list examples with alternative forms of writing apps
-that consumes ``my-module.js`` build above.
+that consumes ``my-module.js`` built above.
 
 Building a universal module from ES6 JavaScript
 -----------------------------------------------
