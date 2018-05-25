@@ -7,7 +7,7 @@ In this boilerplate, a sample module is implementated using three classes
 ``Base``, ``Foo``, and ``Bar``.  But it exposes only two of them: ``Foo`` and ``Bar``.  
 This configuration is so simple, yet scalable to a fully featured module such as three.js.  
 
-Here We explain how to build the module and an ES6 app that imports it.
+Here we explain how to build the module and an ES6 app that imports it.
 As a complementary material, we list examples with various alternative
 ways of consuming the same module.
 
