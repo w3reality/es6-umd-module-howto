@@ -2,13 +2,14 @@
 [DRAFT] Standalone demo of creating universal modules/apps from ES6 JavaScript code
 ===================================================================================
 
-A minimal demo of extending ES6 classes and selectively export them.
-In this boilerplate, the sample module is implementated using only three classes
-``Base``, ``Foo``, and ``Bar``.  But it exposes only two classes ``Foo`` and ``Bar``.  
+A minimal demo of defining ES6 classes and selectively export them as a module.
+In this boilerplate, a sample module is implementated using three classes
+``Base``, ``Foo``, and ``Bar``.  But it exposes only two of them: ``Foo`` and ``Bar``.  
 This configuration is so simple, yet scalable to a fully featured module such as three.js.  
 
-Here We explain how to build the module and the related app.  As a complementary material, we
-list examples with various alternative ways of consuming the same module.
+Here We explain how to build the module and an ES6 app that imports it.
+As a complementary material, we list examples with various alternative
+ways of consuming the same module.
 
 Universal module from ES6 JavaScript
 ------------------------------------
