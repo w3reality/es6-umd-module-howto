@@ -69,8 +69,8 @@ https://w3reality.github.io/es6-umd-module-howto/my-app/dist/index.html
    $ npm run build  # get ES5 app output
 
 
-Complementary examples: Consuming a universal module
-----------------------------------------------------
+Complementary examples: alternative ways of consuming ``my-module.js``
+----------------------------------------------------------------------
 
 !! ex-require
 !! ex-...
