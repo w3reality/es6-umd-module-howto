@@ -1,24 +1,35 @@
 
-[DRAFT] Standalone demo of creating universal modules/apps from ES6 JavaScript code
-===================================================================================
+[DRAFT] es6-umd-module-howto
+============================
 
-A minimal demo of defining ES6 classes and selectively export them as a module.
-In this boilerplate, we implement a sample module called ``my-module.js`` using three ES6 classes
-``Base``, ``Foo``, and ``Bar``.  But the module exposes only two of them: ``MyModule.Foo`` and ``MyModule.Bar``.  
+Standalone demo of creating universal modules/apps from ES6 JavaScript code.
+
+In this minimal boilerplate, we define ES6 classes and selectively export them
+as one module called ``my-module.js``.  The module uses three ES6 classes
+``Base``, ``Foo``, and ``Bar``.  But it exposes only two of them: ``MyModule.Foo`` and ``MyModule.Bar``.  
 This configuration is so simple, yet scalable to writing a feature-rich module
 such as three.js (that provides numerous classes, e.g. ``THREE.Scene``, ``THREE.Mesh``, ...).
 
-We explain how to build ``my-module.js`` and an ES6 app that imports it.  The output
-module and app are complying with `UMD (Universal Module Definition)`_.
+We also demonstrate how to build an ES6 app that imports ``my-module.js``.
+
+The output module and app comply with `UMD (Universal Module Definition)`_.
 So they can be conveniently consumed by script-tags, AMD loading (require.js), and Node.js.
 
 .. _UMD (Universal Module Definition): https://github.com/umdjs/umd
 
-As a complementary material, we list examples with alternative forms of writing apps
+As a complementary material, we list some examples with alternative forms of writing apps
 that consumes ``my-module.js`` built above.
 
-Building a universal module from ES6 JavaScript
------------------------------------------------
+**Quick Guide**
+
+If you are a dev wishing to
+
+- create an ES6 module -> hack section 1
+- create an ES6 app that depends on ES6 modules -> hack section 1 and 2
+- use an ES6 module in script-tags/require.js/node.js -> hack section 3
+
+1. Building a universal module from ES6 JavaScript
+--------------------------------------------------
 
 .. code::
 
@@ -43,8 +54,8 @@ Building a universal module from ES6 JavaScript
    $ npm run build  # get ES5 module output
 
    
-Building a universal app from ES6 JavaScript
---------------------------------------------
+2. Building a universal app from ES6 JavaScript
+-----------------------------------------------
 
 https://w3reality.github.io/es6-umd-module-howto/my-app/dist/index.html
 
@@ -69,8 +80,8 @@ https://w3reality.github.io/es6-umd-module-howto/my-app/dist/index.html
    $ npm run build  # get ES5 app output
 
 
-Complementary examples: alternative ways of consuming ``my-module.js``
-----------------------------------------------------------------------
+3. Complementary examples: alternative ways of consuming ``my-module.js``
+-------------------------------------------------------------------------
 
 !! ex-require
 !! ex-...
