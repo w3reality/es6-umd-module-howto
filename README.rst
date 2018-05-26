@@ -24,9 +24,9 @@ that consumes ``my-module.js`` built above.
 
 If you are a dev wishing to
 
-- create an ES6 module -> hack section 1
-- create an ES6 app that depends on ES6 modules -> hack section 1 and 2
-- use an ES6 module in script-tags/require.js/node.js -> hack section 3
+- create an ES6 module -> go hack Section 1
+- create an ES6 app that depends on ES6 modules -> go hack Section 1 and 2
+- use an ES6 module in script-tags/require.js/node.js -> go hack Section 3
 
 1. Building a universal module from ES6 JavaScript
 --------------------------------------------------
