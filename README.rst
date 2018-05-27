@@ -88,9 +88,9 @@ If you are a developer wishing to
    $ npm install  # set up build tools
    $ npm run build  # get ES5 app output in dist/ (transpiled by Babel)
 
-**Demo 🔥** (`index.html <https://github.com/w3reality/es6-umd-module-howto/blob/master/my-app/dist/index.html>`__)
+**Demo 🔥**
 
-`Run the app`_: Messages from ``Foo`` and ``Bar`` objects are displayed
+`Run the app`_: Messages from ``Foo`` and ``Bar`` objects are displayed (`index.html <https://github.com/w3reality/es6-umd-module-howto/blob/master/my-app/dist/index.html>`__)
 
 .. _Run the app: https://w3reality.github.io/es6-umd-module-howto/my-app/dist/index.html
    
