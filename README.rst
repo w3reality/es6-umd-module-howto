@@ -2,9 +2,9 @@
 es6-umd-module-howto
 ====================
 
-Standalone demo of creating universal modules/apps from ES6 JavaScript code.
+Scalable boilerplate for creating universal modules/apps from ES6 JavaScript.
 
-In this minimal boilerplate, we show how to define ES6 classes and selectively export them
+Using this minimal boilerplate, we show how to define ES6 classes and selectively export them
 as one module called ``my-module.js``.  The module consists of three ES6 classes
 ``Base``, ``Foo``, and ``Bar``; but it exposes only two of them as ``MyModule.Foo`` and ``MyModule.Bar``.
 This configuration is so simple, yet scalable to writing a very feature-rich module
@@ -104,7 +104,7 @@ list alternative (traditional) ways to consume ``my-module.js`` that can be
 useful depending on the situations.  In (4), we show how to use the same
 module/app with Node.js.
 
-**(1) Loading with script tags** (`app-script-tag/index.html <https://github.com/w3reality/es6-umd-module-howto/blob/master/app-script-tag/index.html>`__, `demo 🔥 <https://w3reality.github.io/es6-umd-module-howto/app-script-tag/index.html>`__)
+**(1) Loading with script tags** (`app-script-tag/index.html <https://github.com/w3reality/es6-umd-module-howto/blob/master/app-script-tag/index.html>`__, `demo <https://w3reality.github.io/es6-umd-module-howto/app-script-tag/index.html>`__)
 
 .. code::
 
@@ -120,7 +120,7 @@ module/app with Node.js.
     bar.hello();
     </script>
   
-**(2) AMD loading with require.js** (`app-require/index.html <https://github.com/w3reality/es6-umd-module-howto/blob/master/app-require/index.html>`__, `demo 🔥 <https://w3reality.github.io/es6-umd-module-howto/app-require/index.html>`__)
+**(2) AMD loading with require.js** (`app-require/index.html <https://github.com/w3reality/es6-umd-module-howto/blob/master/app-require/index.html>`__, `demo <https://w3reality.github.io/es6-umd-module-howto/app-require/index.html>`__)
 
 .. code::
 
@@ -139,7 +139,7 @@ module/app with Node.js.
     </script>
 
 
-**(3) AMD loading with require.js and config** (`app-require-config <https://github.com/w3reality/es6-umd-module-howto/tree/master/app-require-config>`__, `demo 🔥 <https://w3reality.github.io/es6-umd-module-howto/app-require-config/index.html>`__)
+**(3) AMD loading with require.js and config** (`app-require-config <https://github.com/w3reality/es6-umd-module-howto/tree/master/app-require-config>`__, `demo <https://w3reality.github.io/es6-umd-module-howto/app-require-config/index.html>`__)
 
 `index.html <https://github.com/w3reality/es6-umd-module-howto/blob/master/app-require-config/index.html>`__
 
