@@ -67,6 +67,9 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 var _myModule = __webpack_require__(1);
 
 var _myModule2 = _interopRequireDefault(_myModule);
@@ -86,7 +89,10 @@ bar.hello();
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 (function webpackUniversalModuleDefinition(root, factory) {
     if (( false ? 'undefined' : _typeof(exports)) === 'object' && ( false ? 'undefined' : _typeof(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
@@ -174,7 +180,9 @@ bar.hello();
         /************************************************************************/
         /******/[
         /* 0 */
-        /***/function (module, exports) {
+        /***/function (module, exports, __webpack_require__) {
+
+            "use strict";
 
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -230,6 +238,8 @@ bar.hello();
         /* 1 */
         /***/function (module, exports, __webpack_require__) {
 
+            "use strict";
+
             Object.defineProperty(exports, "__esModule", {
                 value: true
             });
@@ -253,6 +263,8 @@ bar.hello();
         },
         /* 2 */
         /***/function (module, exports, __webpack_require__) {
+
+            "use strict";
 
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -320,6 +332,8 @@ bar.hello();
         },
         /* 3 */
         /***/function (module, exports, __webpack_require__) {
+
+            "use strict";
 
             Object.defineProperty(exports, "__esModule", {
                 value: true
