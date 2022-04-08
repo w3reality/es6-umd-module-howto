@@ -1,3 +1,4 @@
+DEPRECATED: All the related functionalities have been integrated and maintained within the `es-pack-js <https://github.com/w3reality/es-pack-js>`__ repository.
 
 es6-umd-module-howto
 ====================
